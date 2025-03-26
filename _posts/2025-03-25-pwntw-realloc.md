@@ -3,13 +3,14 @@ title:  "Pwnable.tw - Re-alloc"
 date:   2025-03-25 10:00:00 +0700
 header:
   teaser: "/assets/images/2025-03-25-pwntw-realloc/Screenshot 2025-03-25 172442.png"
+categories: 
+  - pwnable
 tags:
   - pwnable.tw
   - elf
   - heap
   - use-after-free
-  - tcache-poisoning
-  - realloc
+  - tcache
 ---
 
 ![Challenge description](/assets/images/2025-03-25-pwntw-realloc/Screenshot%202025-03-25%20172442.png){:class="img-responsive"}
