@@ -18,8 +18,8 @@ tags:
 ### Tổng quan
 Challenge cho ta một elf binary cùng với libc phiên bản 2.29. RELRO và PIE tắt.  
 ![Checksec](/assets/images/2025-03-25-pwntw-realloc/Screenshot%202025-03-26%20120846.png){:class="img-responsive"}  
-Chương trình có 4 chức năng:
-1. Alloc 1 chunk có index, size và data được user chỉ định. Giá trị size phải nhỏ hơn 0x78 (Vừa với tcache).
+Chương trình có 4 chức năng:  
+1, Alloc 1 chunk có index, size và data được user chỉ định. Giá trị size phải nhỏ hơn 0x78 (Vừa với tcache).
 
 ```cpp
 int allocate()
@@ -60,7 +60,7 @@ int allocate()
   return (int)v0;
 }
 ```
-2. Re-alloc 1 chunk đã được alloc trước đó với size và data mới.
+2, Re-alloc 1 chunk đã được alloc trước đó với size và data mới.
 
 ```cpp
 int reallocate() {
@@ -84,7 +84,7 @@ int reallocate() {
   return read_input(heap[v1], (unsigned int)size);
 }
 ```
-3. Free 1 chunk có index được user chỉ định. Sau khi free có đặt lại pointer về null nên sẽ không có lỗi ở đây.
+3, Free 1 chunk có index được user chỉ định. Sau khi free có đặt lại pointer về null nên sẽ không có lỗi ở đây.
 
 ```cpp
 int rfree() {
@@ -104,7 +104,7 @@ int rfree() {
   return (int)v0;
 }
 ```
-4. Thoát chương trình.
+4, Thoát chương trình.
 
 Ngoài ra, chương trình chỉ cho phép 2 chunk tồn tại đồng thời (index là 0 hoặc 1), việc này được kiểm soát bởi global array **heap**.
 ### Hiểu về hàm realloc
@@ -123,6 +123,7 @@ Các bước khai thác:
 4. Ghi đè got_atoll thành system, thao tác tương tự bước 1 (lưu ý printf trả về số kí tự được in thành công)
 5. Lấy shell
 
+Mã khai thác:  
 ```python
 #!/usr/bin/python3
 from pwn import *
