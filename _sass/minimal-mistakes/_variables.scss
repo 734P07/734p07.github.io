@@ -125,23 +125,23 @@ $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
 $notice-background-mix: 80% !default;
 $code-notice-background-mix: 90% !default;
 
-/* syntax highlighting (base16) */
-$base00: #263238 !default;
-$base01: #2e3c43 !default;
-$base02: #314549 !default;
-$base03: #546e7a !default;
-$base04: #b2ccd6 !default;
-$base05: #eeffff !default;
-$base06: #eeffff !default;
-$base07: #ffffff !default;
-$base08: #f07178 !default;
-$base09: #f78c6c !default;
-$base0a: #ffcb6b !default;
-$base0b: #c3e88d !default;
-$base0c: #89ddff !default;
-$base0d: #82aaff !default;
-$base0e: #c792ea !default;
-$base0f: #ff5370 !default;
+/* default syntax highlighting (base16) */
+$base00: #263238;
+$base01: #2e3c43;
+$base02: #314549;
+$base03: #546e7a;
+$base04: #b2ccd6;
+$base05: #eeffff;
+$base06: #eeffff;
+$base07: #ffffff;
+$base08: #f07178;
+$base09: #f78c6c;
+$base0a: #ffcb6b;
+$base0b: #c3e88d;
+$base0c: #89ddff;
+$base0d: #82aaff;
+$base0e: #c792ea;
+$base0f: #ff5370;
 
 /*
    Breakpoints
