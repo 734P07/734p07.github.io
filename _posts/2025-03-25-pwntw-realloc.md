@@ -19,7 +19,7 @@ tags:
 Challenge cho ta một elf binary cùng với libc phiên bản 2.29. RELRO và PIE tắt.  
 ![Checksec](/assets/images/2025-03-25-pwntw-realloc/Screenshot%202025-03-26%20120846.png){:class="img-responsive"}  
 Chương trình có 4 chức năng:
-1. Alloc 1 chunk có index, size và data được user chỉ định. Giá trị size phải nhỏ hơn 0x78 (Vừa với tcache).
+1. Alloc 1 chunk có index, size và data được user chỉ định. Giá trị size phải nhỏ hơn 0x78 (Vừa với tcache).  
 ```cpp
 int allocate()
 {
